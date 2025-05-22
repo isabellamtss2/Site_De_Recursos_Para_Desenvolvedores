@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Code Resources</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+        h1 {
+            margin: 0;
+        }
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        nav ul li {
+            display: inline;
+            margin: 0 15px;
+        }
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+        }
+        nav ul li a:hover {
+            text-decoration: underline;
+        }
+        section {
+            padding: 20px;
+            margin: 10px;
+        }
+        section h2 {
+            margin-top: 0;
+        }
+        .resource-link {
+            color: #333;
+            text-decoration: none;
+            display: block;
+            margin-bottom: 10px;
+        }
+        .resource-link:hover {
+            text-decoration: underline;
+        }
+        .details {
+            display: none;
+            margin-top: 10px;
+            padding: 10px;
+            background-color: #e1e1e1;
+            border-radius: 5px;
+        }
+        footer {
+            text-align: center;
+            background-color: #333;
+            color: white;
+            padding: 10px;
+            position: absolute;
+            width: 100%;
+            bottom: 0;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Code Resources</h1>
+        <nav>
+            <ul>
+                <li><a href="#frontend">Modelos básicos de Javascript para iniciantes.</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="frontend">
+        <h2>Variáveis</h2>
+        <p>O que é uma variável?</p>
+        <p>uma variável é como uma caixinha onde voçe guarda um valor para usar depois.</p>
+        <a href="#" class="resource-link" onclick="toggleDetails('frontend-details')">variáveis basicas Javascript</a>
+        <div id="frontend-details" class="details">
+            <ul>
+                <li><a target="_blank">Número;"let idade = "25;" "</a></li>
+                <li><a target="_blank">Texto(String); "let nome = "Lucas" "</a></li>
+                <li><a target="_blank">Booleano(Verdadeiro ou falso); "let estaChovendo = false;"</a></li>
+                <li><a target="_blank">Array(Lista de valores); "let frutas = ["maça", "banana", "Laranja"];"</a></li>
+                <li><a target="blank" >Objeto(conjunto de propriedades); let pessoa = {
+                     nome: "Ana",
+                    idade: 30 
+                    };</a></li>
+                <li><a target="blank">Constante(valor que não muda); "const PI = 3,14;"</a></li>
+            </ul>
+        
+        
+        
+    <section id="backend">
+        <h2>como criar uma variável em javascript?</h2>
+          <li><a href="frontend">voçe pode usar tres palavras para criar variáveis:</a></li>
+        
+    
+        
+        <a href="#" class="resource-link" onclick="toggleDetails('backend-details')">palavras chaves</a>
+        <div id="backend-details" class="details">
+            <ul>
+                <li><a href= "target=">Let- pode mudar depois</a></li>
+                <li><a href="target=">const- não pode mudar</a></li>
+                <li><a href="target=">var- antiga, não é muito recomendada hoje</a></li>
+                <ul>
+        </div>
+    </section>
+
+    <section id="tools">
+        <h2>conselhos e dicas recomendadas</h2>
+        <p>siga esses passos.</p>
+        <a href="#" class="resource-link" onclick="toggleDetails('tools-details')">dicas para iniciantes</a>
+        <div id="tools-details" class="details">
+            <ul>
+                <li><a href="target="_blank> sempre termine as linhas com ; (não é obrigatorio, mas é uma boa pratica).</li>
+                <li><a href="target="_blank>use nomes que façam sentido;(como nome,idade,etc.).</a></li>
+                <li><a href="target="_blank>Console.log() serve para mostrar algo no console do navegador (útil para testes).</a></li>
+                
+            </ul>
+        </div>
+    </section>
+             <h2>use um site online para testar código</h2>   
+             <a href="https//jsfiddle.net" target="_blank">Clique aqui para abrir o site</a>
+
+
+    
+
+    <script>
+        function toggleDetails(id) {
+            const details = document.getElementById(id);
+            if (details.style.display === "none" || details.style.display === "") {
+                details.style.display = "block";
+            } else {
+                details.style.display = "none";
+            }
+        }
+    </script>
+</body>
+</html>
