@@ -1,79 +1,83 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Code Resources</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f4f4f4;
-            color: #333;
-            line-height: 1.6;
-            margin: 0;
-            padding: 0;
-        }
-        header {
-            background-color: #333;
-            color: white;
-            text-align: center;
-            padding: 20px;
-        }
-        h1 {
-            margin: 0;
-        }
-        nav ul {
-            list-style-type: none;
-            padding: 0;
-        }
-        nav ul li {
-            display: inline;
-            margin: 0 15px;
-        }
-        nav ul li a {
-            color: white;
-            text-decoration: none;
-            font-size: 18px;
-        }
-        nav ul li a:hover {
-            text-decoration: underline;
-        }
-        section {
-            padding: 20px;
-            margin: 10px;
-        }
-        section h2 {
-            margin-top: 0;
-        }
-        .resource-link {
-            color: #333;
-            text-decoration: none;
-            display: block;
-            margin-bottom: 10px;
-        }
-        .resource-link:hover {
-            text-decoration: underline;
-        }
-        .details {
-            display: none;
-            margin-top: 10px;
-            padding: 10px;
-            background-color: #e1e1e1;
-            border-radius: 5px;
-        }
-        footer {
-            text-align: center;
-            background-color: #333;
-            color: white;
-            padding: 10px;
-            position: absolute;
-            width: 100%;
-            bottom: 0;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Recursos para Desenvolvedores</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    nav {
+      background-color: #333;
+      padding: 1rem;
+    }
+
+    nav a {
+      color: white;
+      margin-right: 1rem;
+      text-decoration: none;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    #conteudo {
+      padding: 2rem;
+    }
+  </style>
 </head>
 <body>
-    <header>
+
+  <nav>
+    <a onclick="mostrarPagina('home')">Home</a>
+    <a onclick="mostrarPagina('login')">Login</a>
+    <a onclick="mostrarPagina('sobre')">Sobre</a>
+  </nav>
+
+  <div id="conteudo">
+    <!-- Conteúdo vai aparecer aqui -->
+  </div>
+
+  <script>
+    function mostrarPagina(pagina) {
+      const conteudo = document.getElementById('conteudo');
+      
+      if (pagina === 'home') {
+        conteudo.innerHTML = `
+          <h1>Bem-vindo ao DevRecursos</h1>
+          <p>Aqui você encontra ferramentas, links úteis e dicas para desenvolvedores web.</p>
+        `;
+      } else if (pagina === 'login') {
+        conteudo.innerHTML = `
+          <h1>Login</h1>
+          <p>Área de login para desenvolvedores acessarem seus recursos personalizados.</p>
+          <form>
+            <label>Email:</label><br>
+            <input type="email" required><br><br>
+            <label>Senha:</label><br>
+            <input type="password" required><br><br>
+            <button type="submit">Entrar</button>
+          </form>
+        `;
+      } else if (pagina === 'sobre') {
+        conteudo.innerHTML = `
+          <h1>Sobre</h1>
+          <p>Este site foi criado para ajudar desenvolvedores a encontrar ferramentas e aprender mais sobre programação.</p>
+        `;
+      }
+    }
+
+    // Mostra a home por padrão ao carregar
+    mostrarPagina('home');
+  </script>
+   <header>
         <h1>Code Resources</h1>
         <nav>
             <ul>
@@ -115,37 +119,5 @@
                 <li><a href="target=">const- não pode mudar</a></li>
                 <li><a href="target=">var- antiga, não é muito recomendada hoje</a></li>
                 <ul>
-        </div>
-    </section>
-
-    <section id="tools">
-        <h2>conselhos e dicas recomendadas</h2>
-        <p>siga esses passos.</p>
-        <a href="#" class="resource-link" onclick="toggleDetails('tools-details')">dicas para iniciantes</a>
-        <div id="tools-details" class="details">
-            <ul>
-                <li><a href="target="_blank> sempre termine as linhas com ; (não é obrigatorio, mas é uma boa pratica).</li>
-                <li><a href="target="_blank>use nomes que façam sentido;(como nome,idade,etc.).</a></li>
-                <li><a href="target="_blank>Console.log() serve para mostrar algo no console do navegador (útil para testes).</a></li>
-                
-            </ul>
-        </div>
-    </section>
-             <h2>use um site online para testar código</h2>   
-             <a href="https//jsfiddle.net" target="_blank">Clique aqui para abrir o site</a>
-
-
-    
-
-    <script>
-        function toggleDetails(id) {
-            const details = document.getElementById(id);
-            if (details.style.display === "none" || details.style.display === "") {
-                details.style.display = "block";
-            } else {
-                details.style.display = "none";
-            }
-        }
-    </script>
 </body>
 </html>
